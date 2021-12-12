@@ -14,7 +14,7 @@
 %\usepackage{times}
 
 
-\title{Vývoj mobilných aplikácií modelom MDE\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/21, vedenie: Ing. Vladimír Mlynaroviè, PhD.}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Vývoj mobilných aplikácií modelom MDE\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Ing. Vladimír Mlynarovič, PhD.}} % meno a priezvisko vyučujúceho na cvičeniach
 
 \author{Oliver Hofer\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
@@ -22,7 +22,7 @@
 	{\small \texttt{xhofer@stuba.sk}}
 	}
 
-\date{\small 06.november  2021} % upravte
+\date{\small 14.december  2021} % upravte
 
 
 
@@ -33,7 +33,7 @@
 \begin{abstract}
 Cieľom článku bude zamerať sa na vývoj mobilných aplikácií s použitím MDE (Model driven approach). Pri modelovom softvérovom programovaní sa konkrétne zameriam na využite UML na vytváranie diagramov. Tiež by som chcel popísať výhody a nevýhody tohto postupu. Následne si opíšeme rôzne typy diagramov UML, ktoré pri vývoji aplikácií môžeme využívať a následne si ich taktiež porovnáme. V ďalšej časti si popíšeme hlavnú výhodu tejto metódy, čo je generovanie kódu na základe vytvorených diagramov za použitia nástroja GenCode. Na koniec článku v časti ~\ref{zaver},si tento model zhodnotíme a urobíme záver.
 \end{abstract}
-
+\paragraph{Kľúčové slová:} Modelovanie, Vývoj mobilných aplikácií, MDE, Model driven engineering, Android, UML
 
 
 \section{Úvod}
@@ -50,7 +50,9 @@ Momentálne väčšina zariadení používa systém Android, a preto som sa aj r
 
 
 \section{Čo je to Android?} \label{Čo je to Android?}
-Android je rozsiahla open-source platforma založená jadre Linuxu. Tento operačný systém je vlastnený spoločnosťou Google. Tento systém bol pôvodne vytvorený pre digitálne fotoaparáty. V dnešnej dobe sa však používa v Mobilných smartfónoch, tabletoch, televíziách, nositeľných zariadeniach, v systémoch v autách... 
+Android je rozsiahla open-source platforma založená jadre Linuxu. Tento operačný systém je vlastnený spoločnosťou Google. Tento systém bol pôvodne vytvorený skupinou developerov známych ako Open Handset Alliance, ktorá bola sponzorovaná firmou Google. \newline
+Tento systém sa začal vyvíjať v októbri 2003. Avšak pôvodne bol vytvorený pre digitálne fotoaparáty. Následne v roku 2005 túto firmu kúpila spoločnosť Google a začala ho používať ako operačný systém pre mobilné zariadenia. \newline
+V dnešnej dobe sa však nepoužíva len v  Mobilných telefónoch. Používa sa aj v tabletoch, televíziách, nositeľných zariadeniach, v systémoch v autách a mnoho ďalších zariadeniach.
 
 
 
@@ -73,11 +75,14 @@ Každá aktivita v Android kóde má svoj životný cyklus (lifecycle). Je to vl
 \section{MDE postup pre Android} \label{MDE spôsob pre Android}
 
 \subsection{Modelovanie}\label{MDE spôsob pre Android:Modelovanie}
-Tento spôsob popisuje ako kompletne popísať štruktúru a správanie Android aplikácie použitím štandardu UML. Tento spôsob sa pozerá na konkrétne veci nie na kompletný kód. Pri modelovaní poznáme pohľad na štruktúru a Pohľad na správanie.
+Tento spôsob popisuje ako kompletne popísať štruktúru a správanie Android aplikácie použitím štandardu UML. \newline
+Pri tomto postupe sú aplikácie modelované za pomoci UML diagramov tried, ktoré sa využívajú na vytvorenie pohľadu na štruktúru, o ktorej si povieme v časti []. A za pomoci diagramov postupnosti vieme generovať kód správania nášho programu, o pohľade na správanie si povieme viac v časti []. 
 
 \subsubsection{Pohľad na štuktúru}\label{MDE spôsob pre Android:Modelovanie:Pohľad na štuktúru}
-afasfasfasfdasfas
-afafafaf
+Z diagramov tried generujeme štrukturálny kód. Pri pohľade na štruktúru sa ako programátori pozeráme na dva základné komponenty,  aktivity a servisy. Sú to špeciálne komponenty, ktoré sa používajú na definovanie základnej aplikačnej štruktúry. V tejto štruktúre by malo byť bližšie špecifikované, ktoré triedy sú aktivity a servisy. Na obrázku č. [] môžeme vidieť znázornenie, kde je Main (Hlavná časť kódu) definovaná ako Aktivita a Pozadie definovaná ako Servis. \newline
+Vyššie spomenuté komponenty môžu nadobúdať určité metódy o ktorých sme si už hovorili v části []. Tieto metódy môžu byť volené programátorom.\newline
+Tiež z diagramov tried program vie vygenerovať atribúty funkcií a vlastnosti objektov.
+
 
 \subsubsection{Pohľad na správanie}\label{MDE spôsob pre Android:Modelovanie:Pohľad na správanie}
 afasdfasfaf
@@ -91,9 +96,25 @@ Bohužiaľ generovanie kódu na základe grafov postupnosti má svoje limity. Na
 
 
 \section{Typy UML diagramov} \label{Typy UML diagramov}
+    \subsection{Diagramy správania}\label{Typy UML diagramov:Diagramy správania}
+    
+    \subsection{Diagramy štruktúry}\label{Typy UML diagramov:Diagramy štruktúry}
+    
+\section{Reakcie na prednášky} \label{Reakcie na prednášky}
 
+ \paragraph{Spoločenské súvislosti.}Podľa môjho osobného názoru prednáška s dekanom našej fakulty bola veľmi zaujímavá. Bolo zaujímavé počúvať o tom ako práca v IT vplýva na nás a na naše okolie. \newline
+Taktiež som si uvedomil, aký je tento sektor dôležitý hlavne v aktuálnej pandemickej situácii. Práca z domu je čoraz bežnejšia a mobilné aplikácie používame na dennej báze. Používame ich napríklad na komunikáciu s inými ľuďmi. Tieto mobilne aplikácie nám umožňujú spájať sa s kolegami, učiteľmi aj bez nutnosti byť v škole alebo práci.\newline
+Tiež som si uvedomil aké je v dnešnej dobe dôležité vzdelanie. Obzvlášť dôležité je v IT sfére kde si niektoré firmy vyžadujú vysokoškolské vzdelanie alebo zamestnanci s vysokým vzdelaním sú lepšie ohodnotený.
 
-
+ 
+ \paragraph{Historické súvislosti.}Táto prednáška bola taktiež veľmi zaujímavá a náučná. Bola o osobnostiach informatiky, ktorí významne do tohto odvetvia prispeli svojimi vedomosťami. Niekedy si ani neuvedomujeme aké to muselo byť náročne niečo také vyvinúť v dobe, v akej sa nachádzali. V dobe, kedy nebolo prístupných toľko informácií akom máme teraz dostupných na internete. V dobe, kedy nemali k dispozícii techniku, ktorá nám v dnešnej dobe zjednodušuje život. Aj napriek tomu boli schopný vymyslieť neuveriteľné zariadenia alebo funkcie. \newline
+ Ale doba ide dopredu. V dnešnej dobe je mnoho vynálezov, ktoré nám zefektívňujú našu robotu. Ako napríklad generovanie kódu na základe UML diagramov čo vie zjavne urýchliť vývoj nových mobilných aplikácií.
+ 
+ \paragraph{Technológia a ľudia.}
+ 
+ \paragraph{Udržateľnosť a etika.}
+ 
+ 
 
 \section{Záver} \label{zaver} % prípadne iný variant názvu
 
