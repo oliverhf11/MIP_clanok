@@ -46,7 +46,12 @@ Momentálne väčšina zariadení používa systém Android, a preto som sa aj r
 \section{Myšlienková mapa} \label{Myšlienková mapa}
 
 
-\includegraphics[scale=0.65]{myšlienková mapa.png}
+\begin{center}
+\includegraphics[scale=0.51]{myšlienková mapa.png}
+Obr. 1: Myšlienková mapa.
+\end{center}
+V myšlienkovej mape môžeme vidieť časti, ktorým sa plánujeme v článku venovať. Ako prvé si povieme čo je to Android v časti []. Následne na to nadviažeme a povieme si ako sa tieto aplikácie vyvíjajú v časti []. 
+Potom si pri bode MDE postup pre Android v časti [] povieme niečo bližšie o modelovaní a generovaní kódu. Modelovanie si ďalej rozdelíme na pohľad na štruktúru a pohľad na správanie. Nakoniec si bližšie popíšeme UML diagramy použité pri vytváraní Android aplikácii v časti [].
 
 
 \section{Čo je to Android?} \label{Čo je to Android?}
@@ -82,24 +87,30 @@ Pri tomto postupe sú aplikácie modelované za pomoci UML diagramov tried, ktor
 Z diagramov tried generujeme štrukturálny kód. Pri pohľade na štruktúru sa ako programátori pozeráme na dva základné komponenty,  aktivity a servisy. Sú to špeciálne komponenty, ktoré sa používajú na definovanie základnej aplikačnej štruktúry. V tejto štruktúre by malo byť bližšie špecifikované, ktoré triedy sú aktivity a servisy. Na obrázku č. [] môžeme vidieť znázornenie, kde je Main (Hlavná časť kódu) definovaná ako Aktivita a Pozadie definovaná ako Servis. \newline
 Vyššie spomenuté komponenty môžu nadobúdať určité metódy o ktorých sme si už hovorili v části []. Tieto metódy môžu byť volené programátorom.\newline
 Tiež z diagramov tried program vie vygenerovať atribúty funkcií a vlastnosti objektov.
-
+\begin{center}
+\includegraphics[scale=0.5]{diagram.png}
+Obr. 2: Myšlienková mapa.
+\end{center}
 
 \subsubsection{Pohľad na správanie}\label{MDE spôsob pre Android:Modelovanie:Pohľad na správanie}
-afasdfasfaf
-afaasdfasfa
-
+Ako sme už vyššie spomínali, pri pohľade na správanie používame diagramy postupnosti. Tieto diagramy vedia znázorňovať rôzne podmienky, cykly, iterácie, atď. Bohužiaľ má to aj svoje chyby. Nie všetky časti kódu sa dajú vygenerovať. Bližšie si o tom povieme v nasledujúcej časti [].
 
 \subsection{Generovanie kódu}\label{Generovanie kódu}
 Hlavným benefitom adaptovania MDE postupu pri vyvíjaní Android aplikácii je automatizácia v podobe generovania kódu. Na generovanie kódu môžeme použiť diagramy tried alebo diagramy postupnosti.\newline
-Z diagramu tried program na generovanie vygeneruje základnú aplikačnú štruktúru a súbory v jazyku Java pre každú triedu.\newline
+Z diagramu tried program na generovanie vygeneruje základnú aplikačnú štruktúru a súbory v jazyku Java pre každú triedu. Obsahuje definície tried a atribúty funkcií. Tiež obsahuje konštruktor a metódy. Z tohto diagramu si vie aplikácia GenCode vie zistiť vzťahy medzi triedami. Keď trieda obsahuje API, program do nášho kódu zahrnie potrebné balíky pre chod programu.\newline
 Bohužiaľ generovanie kódu na základe grafov postupnosti má svoje limity. Napríklad jednoduché operácie ako generovanie dynamicky alokovaných polí nesú možné. Avšak dokáže generovať časti kódu ako podmienky a cykly.
 
 
+
 \section{Typy UML diagramov} \label{Typy UML diagramov}
-    \subsection{Diagramy správania}\label{Typy UML diagramov:Diagramy správania}
-    
-    \subsection{Diagramy štruktúry}\label{Typy UML diagramov:Diagramy štruktúry}
-    
+    \subsection{Diagramy tried}\label{Typy UML diagramov:Diagramy správania}
+    Tento typ diagramu je jeden z najviac populárnych diagramov medzi softvérovými inžiniermi. Je to typ diagramu štruktúr. Jednotlivé komponenty takého diagramu reprezentujú triedy, objekty alebo vzťahy medzi triedami a objektami.\newline
+    Tvar triedy pozostáva z obdĺžnika s tromi riadkami. Prvý riadok obsahuje názov triedy, druhý riadok atribúty a tretí riadok obsahuje metódy triedy ktoré používame. 
+
+    \subsection{Diagramy správania}\label{Typy UML diagramov:Diagramy štruktúry}
+    Diagramy správania (Diagramy postupnosti) sa dá v skratke nazvať ako diagram vzťahov. Diagram vzťahov preto, lebo popisuje ako a v akej postupnosti spolu objekty pracujú.\newline
+    Tieto diagramy používajú softvérový developeri a profesionáli v oblasti obchodu, aby pochopili požiadavky nového systému alebo na zdokumentovanie existujúceho procesu. 
+
 \section{Reakcie na prednášky} \label{Reakcie na prednášky}
 
  \paragraph{Spoločenské súvislosti.}Podľa môjho osobného názoru prednáška s dekanom našej fakulty bola veľmi zaujímavá. Bolo zaujímavé počúvať o tom ako práca v IT vplýva na nás a na naše okolie. \newline
@@ -110,13 +121,17 @@ Tiež som si uvedomil aké je v dnešnej dobe dôležité vzdelanie. Obzvlášť
  \paragraph{Historické súvislosti.}Táto prednáška bola taktiež veľmi zaujímavá a náučná. Bola o osobnostiach informatiky, ktorí významne do tohto odvetvia prispeli svojimi vedomosťami. Niekedy si ani neuvedomujeme aké to muselo byť náročne niečo také vyvinúť v dobe, v akej sa nachádzali. V dobe, kedy nebolo prístupných toľko informácií akom máme teraz dostupných na internete. V dobe, kedy nemali k dispozícii techniku, ktorá nám v dnešnej dobe zjednodušuje život. Aj napriek tomu boli schopný vymyslieť neuveriteľné zariadenia alebo funkcie. \newline
  Ale doba ide dopredu. V dnešnej dobe je mnoho vynálezov, ktoré nám zefektívňujú našu robotu. Ako napríklad generovanie kódu na základe UML diagramov čo vie zjavne urýchliť vývoj nových mobilných aplikácií.
  
- \paragraph{Technológia a ľudia.}
+ \paragraph{Technológia a ľudia.}Prednáška na túto tému sa mi osobne páčila. Bola zaujímavá a náučná ako všetky prednášky v tomto semestri. \newline
+Technológie sú medzi nami už od pradávna. Od prvých vynálezov ich hlavným cieľom bolo, zjednodušovať si každodenné úlohy. Iné to nie je ani v dnešnej dobe. Pri programovaní používame množstvo technológií, ktoré nám tento proces zefektívňujú. Preto som si vybral aj túto tému, v ktorej hovorím o možnosti generovania kódu z UML diagramov. 
+
  
  \paragraph{Udržateľnosť a etika.}
  
  
 
 \section{Záver} \label{zaver} % prípadne iný variant názvu
+V tomto článku sme si ukázali, ako môžeme použiť modelovanie pri tvorbe Android aplikácii. Modelovanie sme konkrétne využili pri generovaní kódu za pomoci UML diagramov. Tento postup má veľa výhod. Najhlavnejšia výhoda je určite rýchlosť písania kódu. Avšak sú tam aj nevýhody, o ktorých sme si povedali v časti [].\newline
+Podľa môjho názoru je táto téma veľmi zaujímavá a má veľkú perspektívu do budúcnosti. 
 
 
 
