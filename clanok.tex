@@ -31,7 +31,7 @@
 \maketitle
 
 \begin{abstract}
-Cieľom článku bude zamerať sa na vývoj mobilných aplikácií s použitím MDE (Model driven approach). Pri modelovom softvérovom programovaní sa konkrétne zameriam na využite UML na vytváranie diagramov. Tiež by som chcel popísať výhody a nevýhody tohto postupu. Následne si opíšeme rôzne typy diagramov UML, ktoré pri vývoji aplikácií môžeme využívať a následne si ich taktiež porovnáme. V ďalšej časti si popíšeme hlavnú výhodu tejto metódy, čo je generovanie kódu na základe vytvorených diagramov za použitia nástroja GenCode. Na koniec článku v časti ~\ref{zaver},si tento model zhodnotíme a urobíme záver.
+Cieľom článku bude zamerať sa na vývoj mobilných aplikácií s použitím MDE (Model driven approach). Pri modelovom softvérovom programovaní sa konkrétne zameriam na využite UML na vytváranie diagramov. Tiež by som chcel popísať výhody a nevýhody tohto postupu. Následne si opíšeme rôzne typy diagramov UML, ktoré pri vývoji aplikácií môžeme využívať. V ďalšej časti si popíšeme hlavnú výhodu tejto metódy, čo je generovanie kódu na základe vytvorených diagramov za použitia nástroja GenCode. Na koniec článku v časti ~\ref{zaver},si tento model zhodnotíme a urobíme záver.
 \end{abstract}
 \paragraph{Kľúčové slová:} Modelovanie, Vývoj mobilných aplikácií, MDE, Model driven engineering, Android, UML
 
@@ -63,12 +63,12 @@ V dnešnej dobe sa však nepoužíva len v  Mobilných telefónoch. Používa sa
 
 \section{Vývoj Android aplikácii } \label{Vývoj Android aplikácii}
 
-Android aplikácie boli v minulosti aj dnes vyvíjané za pomoci jazyku Java. Avšak dnes sa začínajú využívať alternatívy ako je Kotlin alebo Dart a mnoho ďalších. Pri písaní programu sa používajú SDK (Software development kit) čo je softvér nástrojov pre vývojárov. IDE (integrated Development Environment) čo je skratka pre integrované vývojové prostredie. \newline
+Android aplikácie boli v minulosti aj dnes vyvíjané za pomoci jazyku Java. Avšak dnes sa začínajú využívať alternatívy ako je Kotlin alebo Dart a mnoho ďalších. Pri písaní programu sa používajú SDK (Software development kit) čo je softvérový balík nástrojov pre vývojárov. IDE (integrated Development Environment) čo je skratka pre integrované vývojové prostredie. \newline
 Hlavné vývojové prostredie pre Android aplikácie je Android Studio, ktoré poskytuje flexibilnú platformu pre developerov, kde môžu používať rôzne SDK. Pre jazyky Kotlin a Java sa používa rovnaké SDK ale jazyk Dart používa SDK, ktoré sa volá Flutter. \newline
 Súčasťou SDK je väčšinou Dalvik. Dalvik je virtuálny stroj na, ktorom beží operačný systém Android. Využíva sa na rýchle testovanie aplikácií bez potreby pripájať mobilné zariadenie. Tento nástroj tiež veľmi zefektívňuje proces programovanie.\newline
 Hlavnou zložkou Android aplikácií je Aktivita. Android aplikácia väčšinou obsahuje jednu alebo viac aktivít. Aktivita sa zobrazuje ako jedno používateľské prostredie, ktoré si vieme predstaviť ako karty s prvkami, s ktorými môže užívateľ pracovať.\newline
 Servis je špeciálna aktivita, ktorá nemá užívateľské rozhranie a pracuje na pozadí. Pracujú na aplikačnej rámcovej vrstve (App Framework Layer). Spolu s aktivitou sú to najpoužívanejšie komponenty pri programovaní Android Aplikácií. \newline
-Každá aktivita v Android kóde má svoj životný cyklus (lifecycle). Je to vlastnosť aplikácie, ktorá určuje čo sa má s určitou aktivitou diať v určitých prípadoch. Napríklad, čo sa stane s aktivitou keď sa spustí aplikácia alebo čo sa stane s aktivitou keď sa aplikácia stane... \cite{VývojAndroid}
+Každá aktivita v Android kóde má svoj životný cyklus (lifecycle). Je to vlastnosť aplikácie, ktorá určuje čo sa má s určitou aktivitou diať v určitých prípadoch. Napríklad, čo sa stane s aktivitou keď sa spustí aplikácia alebo čo sa stane s aktivitou keď sa aplikácia zavrie... \cite{VývojAndroid}
 
 
 
@@ -81,11 +81,11 @@ Každá aktivita v Android kóde má svoj životný cyklus (lifecycle). Je to vl
 
 \subsection{Modelovanie}\label{MDE spôsob pre Android:Modelovanie}
 Tento spôsob popisuje ako kompletne popísať štruktúru a správanie Android aplikácie použitím štandardu UML. \newline
-Pri tomto postupe sú aplikácie modelované za pomoci UML diagramov tried, ktoré sa využívajú na vytvorenie pohľadu na štruktúru, o ktorej si povieme v časti ~\ref{MDE spôsob pre Android:Modelovanie:Pohľad na štuktúru}. A za pomoci diagramov postupnosti vieme generovať kód správania nášho programu, o pohľade na správanie si povieme viac v časti ~\ref{MDE spôsob pre Android:Modelovanie:Pohľad na správanie}. \cite{GenerovanieAndroid}
+Pri tomto postupe sú aplikácie modelované za pomoci UML diagramov tried, ktoré sa využívajú na vytvorenie pohľadu na štruktúr, o ktorej si povieme v časti ~\ref{MDE spôsob pre Android:Modelovanie:Pohľad na štuktúru}. A za pomoci diagramov postupnosti vieme generovať kód správania nášho programu, o pohľade na správanie si povieme viac v časti ~\ref{MDE spôsob pre Android:Modelovanie:Pohľad na správanie}. \cite{GenerovanieAndroid}
 
 \subsubsection{Pohľad na štuktúru}\label{MDE spôsob pre Android:Modelovanie:Pohľad na štuktúru}
-Z diagramov tried generujeme štrukturálny kód. Pri pohľade na štruktúru sa ako programátori pozeráme na dva základné komponenty,  aktivity a servisy. Sú to špeciálne komponenty, ktoré sa používajú na definovanie základnej aplikačnej štruktúry. V tejto štruktúre by malo byť bližšie špecifikované, ktoré triedy sú aktivity a servisy. Na nasledujúcom obrázku môžeme vidieť znázornenie, kde je Main (Hlavná časť kódu) definovaná ako Aktivita a Pozadie definovaná ako Servis. \newline
-Vyššie spomenuté komponenty môžu nadobúdať určité metódy o ktorých sme si už hovorili v části ~\ref{Vývoj Android aplikácii}. Tieto metódy môžu byť volené programátorom.\newline
+Z diagramov tried generujeme štrukturálny kód. Pri pohľade na štruktúru sa ako programátori pozeráme na dva základné komponenty,  aktivity a servisy. Sú to špeciálne komponenty, ktoré sa používajú na definovanie základnej aplikačnej štruktúry. V tejto štruktúre by malo byť bližšie špecifikované, ktoré triedy sú aktivity a servisy. Na nasledujúcom obrázku môžeme vidieť znázornenie, kde je Main (Hlavná časť kódu) definovaná ako Aktivita a Background (pozadie) definované ako Servis. \newline
+Vyššie spomenuté komponenty môžu nadobúdať určité metódy, o ktorých sme si už hovorili v časti ~\ref{Vývoj Android aplikácii}. Tieto metódy môžu byť volené programátorom.\newline
 Tiež z diagramov tried program vie vygenerovať atribúty funkcií a vlastnosti objektov.\cite{GenerovanieAndroid}\cite{GenerovanieJava}
 \begin{center}
 \includegraphics[scale=0.5]{diagram.png}
@@ -129,7 +129,8 @@ Technológie sú medzi nami už od pradávna. Od prvých vynálezov ich hlavným
  
 
 \section{Záver} \label{zaver} % prípadne iný variant názvu
-V tomto článku sme si ukázali, ako môžeme použiť modelovanie pri tvorbe Android aplikácii. Modelovanie sme konkrétne využili pri generovaní kódu za pomoci UML diagramov. Tento postup má veľa výhod. Najhlavnejšia výhoda je určite rýchlosť písania kódu. Avšak sú tam aj nevýhody, o ktorých sme si povedali v časti .\newline
+V tomto článku sme si ukázali, ako môžeme použiť modelovanie pri tvorbe Android aplikácii. Modelovanie sme konkrétne využili pri generovaní kódu za pomoci UML diagramov. Tento postup má veľa výhod. Medzi najvýznamnejšie výhody patri automatizácia. Táto automatizácia vedie ku zvýšenej efektivite, a to až o 70 percent. Automatizácia generovania kódu tiež vedie aj ku menej chybám pri písaní kódu. 
+Avšak sú tam aj nevýhody. Najväčšia nevýhoda je nemožnosť generovať všetok kód z diagramov správania. Medzi ďalšie nevýhody patrí efektivita vygenerovaného kódu.\newline
 Podľa môjho názoru je táto téma veľmi zaujímavá a má veľkú perspektívu do budúcnosti. 
 
 
